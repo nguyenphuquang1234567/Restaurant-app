@@ -36,6 +36,15 @@ Your personality:
 If asked about anything not related to the restaurant, politely redirect the conversation back to Sakura Spike's services.
 `;
 
+// Fallback responses when API key is not available
+const fallbackResponses = [
+    "Hello! Welcome to Sakura Spike! 🌸 How can I help you today?",
+    "Hi there! I'm here to help you with our delicious Vietnamese menu at Sakura Spike! 🍜",
+    "Welcome to Sakura Spike! Would you like to know about our special dishes today? 😊",
+    "Hello! I'm your Sakura Spike assistant. What would you like to know about our restaurant? 🌟",
+    "Hi! Welcome to Sakura Spike! Our Vietnamese cuisine is waiting for you! 🥢"
+];
+
 // In-memory storage for conversations (Note: This will reset on each function call in serverless)
 // In production, use a database like Vercel KV, MongoDB, or Supabase
 const conversations = new Map();
@@ -62,6 +71,16 @@ export default async function handler(req, res) {
         
         if (!message || !sessionId) {
             return res.status(400).json({ error: 'Message and sessionId are required' });
+        }
+
+        // Check if OpenAI API key is available
+        if (!process.env.OPENAI_API_KEY) {
+            // Use fallback response
+            const randomResponse = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+            return res.status(200).json({
+                response: randomResponse,
+                fallback: true
+            });
         }
 
         // Get or create conversation history
@@ -104,9 +123,13 @@ export default async function handler(req, res) {
 
     } catch (error) {
         console.error('Error in chat endpoint:', error);
-        res.status(500).json({ 
-            error: 'Sorry, I encountered an error. Please try again.',
-            fallback: "Hello! Welcome to Sakura Spike! How can I help you today? 🌸"
+        
+        // Return fallback response on error
+        const randomResponse = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+        res.status(200).json({ 
+            response: randomResponse,
+            fallback: true,
+            error: 'Using fallback response'
         });
     }
 }
