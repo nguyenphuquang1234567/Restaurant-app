@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Spike - Vietnamese Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>
+                    <img src="images/sakura_spike.png" alt="Sakura Spike Logo" style="width: 30px; height: 30px; border-radius: 50%;">
+                    Sakura Spike
+                </h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Sakura Spike</h1>
+            <p class="hero-subtitle">Discover authentic Vietnamese cuisine</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-bg"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>The finest dishes prepared with fresh ingredients</p>
+            </div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="appetizer">Appetizers</button>
+                <button class="category-btn" data-category="main">Main Dishes</button>
+                <button class="category-btn" data-category="dessert">Desserts</button>
+                <button class="category-btn" data-category="drink">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg spring-rolls"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fresh Spring Rolls</h3>
+                        <p>Fresh shrimp, boiled pork, herbs wrapped in rice paper</p>
+                        <span class="price">$2.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg pho"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Traditional Beef Pho</h3>
+                        <p>Rich broth, rare beef, chewy rice noodles</p>
+                        <span class="price">$8.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg com-tam"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Pork Rice</h3>
+                        <p>Aromatic grilled ribs with fragrant broken rice</p>
+                        <span class="price">$7.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg banh-mi"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Pork Banh Mi</h3>
+                        <p>Delicious grilled pork with fresh herbs</p>
+                        <span class="price">$4.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg che"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Three Color Dessert</h3>
+                        <p>Mung bean, red bean, and pandan jelly with coconut milk</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drink">
+                    <div class="menu-item-image">
+                        <div class="menu-img-bg coffee"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Vietnamese Iced Coffee</h3>
+                        <p>Strong coffee with sweet condensed milk</p>
+                        <span class="price">$3.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Sakura Spike</h2>
+                    <p>Established in 2010, Sakura Spike proudly serves authentic Vietnamese cuisine with genuine flavors.</p>
+                    <p>We use the finest fresh ingredients, carefully selected to ensure our dishes always maintain perfect quality.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Traditional Cuisine</h4>
+                            <p>Preserving the authentic flavors of Vietnamese cuisine</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Fresh Ingredients</h4>
+                            <p>Using fresh, clean, and hygienic ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Dedicated Service</h4>
+                            <p>Professional and friendly staff</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-bg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 ABC Street, District 1, Ho Chi Minh City</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+84 28 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@delicious.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Monday - Sunday: 7:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sakura Spike</h3>
+                    <p>Authentic Vietnamese Flavors</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <p>Monday - Friday: 7:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 8:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delicious Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script src="script.js"></script>
+</body>
+
+<!-- Chatbot outside body to ensure it's always visible -->
+<div class="chatbot-button" id="chatbotButton" style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 999999 !important; width: 60px; height: 60px; background: linear-gradient(135deg, #ff69b4, #ff1493); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.4); transition: all 0.3s ease; animation: float 3s ease-in-out infinite; pointer-events: auto !important; visibility: visible !important; opacity: 1 !important; transform: none !important; top: auto !important; left: auto !important; float: none !important; clear: none !important;">
+    <i class="fas fa-comments" style="color: white !important; font-size: 24px !important;"></i>
+</div>
+
+<div class="chatbot-container" id="chatbotContainer" style="position: fixed !important; bottom: 100px !important; right: 30px !important; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); z-index: 1000000 !important; display: none; flex-direction: column; overflow: hidden; animation: slideInUp 0.3s ease-out; transform: none !important; top: auto !important; left: auto !important;">
+    <div class="chatbot-header">
+        <h3>Sakura Spike Assistant</h3>
+        <button class="chatbot-close" id="chatbotClose">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+            <div class="message-content">
+                Hello! Welcome to Sakura Spike! How can I help you today? 🌸
+            </div>
+        </div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Type your message...">
+        <button id="chatbotSend">Send</button>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,48 @@
+{
+  "name": "delicious-restaurant-website",
+  "version": "1.0.0",
+  "description": "A modern and responsive Vietnamese restaurant website built with HTML, CSS, and JavaScript",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "vercel dev",
+    "dev": "vercel dev",
+    "serve": "vercel dev",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "restaurant",
+    "website",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "modern",
+    "vietnamese-food"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/delicious-restaurant-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/delicious-restaurant-website/issues"
+  },
+  "homepage": "https://yourusername.github.io/delicious-restaurant-website",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "openai": "^5.13.1"
+  }
+}
